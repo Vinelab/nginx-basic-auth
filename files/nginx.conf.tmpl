@@ -18,7 +18,6 @@ http {
     client_max_body_size ##CLIENT_MAX_BODY_SIZE##;
     proxy_read_timeout ##PROXY_READ_TIMEOUT##;
 
-    include /etc/nginx/conf.d/*.conf;
 
     location / {
         root   /usr/share/nginx/html;
@@ -37,4 +36,7 @@ http {
       access_log off;
     }
   }
+
+  include /etc/nginx/conf.d/*.conf;
+
 }
